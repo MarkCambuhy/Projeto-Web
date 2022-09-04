@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    font-family: 'M PLUS 1', sans-serif;
+    
+}
+
+section.m3{
+    width: 100%;
+    height: 100vh;
+    background-image: url('Img/Model-3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.logo{
+    width: 120px;
+    height: 24px;
+    padding: 0px 0px 0px 32px;
+}
+
+.logo svg{
+    width: 120px;
+    height: 24px;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.menucentral a, .menuesquerdo a{
+    text-decoration: none;
+    color: black;
+    margin: 0px 10px;
+    display: inline-block;
+    transition: 0.5s;
+    padding: 4px 8px;
+}
+
+.menucentral a:hover, .menuesquerdo a:hover{
+    border-radius: 5px;
+    background-color: gray;
+
+}
+
+.menucentral{
+    display: none;
+}
+
+@media(min-width:1100px){
+    .menucentral{
+        display: initial;
+    }
+}
+
+.m3{
+    text-align: center;
+    position: absolute;
+}
+
+.m3 .conteiner h1{
+    margin-top: 90px;
+}
+
+.m3 .btn{
+    margin-top: 330px;
+}
+
+.m3 h1{
+    padding: 0px 24px;
+    font-size: 50px;
+}
+
+.m3 p{
+    padding: 0px 24px;
+    font-size: 14px;
+    color: black;
+    
+}
+
+.menuesquerdo .mnesq{
+    display: none;
+}
+
+@media(min-width:1100px){
+    .menuesquerdo .mnesq{
+        display: initial;
+    }
+}
+
+.order{
+    text-decoration: none;
+    background-color: rgba(23, 26, 32, 0.8);
+    color: white;
+    padding: 8px 80px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.iventory{
+    text-decoration: none;  
+    background-color: #F4F4F4A6;
+    color: #393C41;
+    padding: 8px 80px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+section .btn a{
+    display: initial;
+}
+
+@media(max-width:600px){
+    section .btn a{
+        display: block;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+    .m3 .btn{
+        margin-top: 250px;
+    }
+}
+
+.conteiner a{
+    color: black;
+}
