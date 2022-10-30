@@ -1,21 +1,93 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS 1', sans-serif;
 }
 
-body{
-    width: 100%;
-    font-family: 'M PLUS 1', sans-serif;
+.login, .criando_conta{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #000;
+    border-radius: 20px;
+    width: 50%;
+    height: 50%;
+    gap: 5px;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.login.show{
+    display: flex;
+}
+
+.criando_conta.show{
+    display: flex;
+}
+.criando_conta.noshow{
+    display: none;
+}
+
+.input_sign, .input_criar{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    gap: 5px;
+}
+
+.sign_case, .conta_case{
+    position: absolute;
+    font-size: 30px;
+    top: 5px;
+    left: 40%;
+}
+
+.create_account{
+    cursor: pointer;
+    color: rgb(119, 30, 228);
     
 }
 
-section.m3{
-    width: 100%;
-    height: 100vh;
-    background-image: url('Img/Model-3.jpg');
-    background-size: cover;
-    background-position: center;
+.create_account:hover{
+    text-decoration: underline;
 }
+
+.close, .close_criando_conta{
+    position: absolute;
+    align-self: flex-end;
+    padding: 10px;
+    top: 10px;
+}
+
+.input_sign input, .input_criar input{
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.signin{
+    border-radius: 5px;
+    width: 64px;
+    height: 32px;
+}
+
+.signin:hover, .close, .close_criando_conta, .btn_criar{
+    cursor: pointer;
+}
+
+.btn_criar{
+    border-radius: 5px;
+    width: 128px;
+    height: 32px;
+}
+
+/* Header */
+
 
 .logo{
     width: 120px;
@@ -53,7 +125,7 @@ header {
 
 .menucentral a:hover, .menuesquerdo a:hover{
     border-radius: 5px;
-    background-color: gray;
+    background-color: rgba(23, 26, 32, 0.1);
 
 }
 
@@ -67,6 +139,25 @@ header {
     }
 }
 
+/**/
+
+.procurar_api{
+    display: none;
+}
+.procurar_api.show{
+    display: inline;
+}
+
+/**/
+section.m3{
+    width: 100%;
+    height: 100vh;
+    background-image: url('Img/Model-3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
 .m3{
     text-align: center;
     position: absolute;
@@ -77,7 +168,7 @@ header {
 }
 
 .m3 .btn{
-    margin-top: 26%;
+    margin-top: 23%;
 }
 
 .m3 h1{

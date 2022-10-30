@@ -5,12 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electric Cars, Solar & Clean Energy | Tesla</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="Img/Tesla_T_symbol.svg.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro e Login</title>
 </head>
 
 <body>
@@ -36,12 +32,58 @@
         </div>
         <div class="menuesquerdo">
             <ol>
-                <il><a href="#" class="mnesq"><span>Shop</span></a></il>
-                <il><a href="#" class="mnesq"><span>Account</span></a></il>
+                <il><a href="#" class="mnesq"><span><input type="text" placeholder="Search" class="procurar_api"></span></a></il>
+                <il><a href="#" class="mnesq" id="account_show"><span>Account</span></a></il>
                 <il><a href="#"><span>Menu</span></a></il>
             </ol>
         </div>
     </header>
+    
+    <div class="login">
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+            </svg>
+        </div>
+        <div class="sign_case">
+            <h3>Sign Up</h3>
+        </div>
+        <div class="input_sign">
+            <label for="">Email:</label>
+            <input type="email" class="email">
+            <label for="">Password:</label>
+            <input type="password" class="pass">
+            <button class="signin">Sign in</button>
+            <span class="create_account">Don't have an account?</span>
+        </div>
+    </div>
+
+
+    <div class="criando_conta">
+        <div class="close_criando_conta">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+            </svg>
+        </div>
+        <div class="conta_case">
+            <h3>Sign Up</h3>
+        </div>
+        <div class="input_criar">
+            <label for="">Name: <span class="val_nome"></span></label>
+            <input type="email" class="name_criar">
+            <label for="">Email: <span class="val_email"></span></label>
+            <input type="email" class="email_criar">
+            <label for="">Password: <span class="val_senha"></span></label>
+            <input type="password" class="pass_criar">
+            <label for="">Reapt password:</label>
+            <input type="password" class="passrepeat_criar">
+            <button class="btn_criar">Create an account</button>
+        </div>
+    </div>
     <section class="m3">
         <div>
             <div class="conteiner">
@@ -54,23 +96,8 @@
             </div>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
-
-<!-- 
-    <svg viewBox="0 0 342 35">
-        <path
-            d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z"
-            fill="currentColor"></path>
-    </svg>
-
-    <div class="carros">
-            <h1>Model 3</h1>
-            <p>Order Online for <a href="#">Touchless Delivery</a></p>
-        </div>
-        <div class="btn">
-            <a href="#">Custom Order</a>
-            <a href="#">Existing Inventory</a>
-        </div>
--->
