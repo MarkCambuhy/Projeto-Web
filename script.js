@@ -21,6 +21,19 @@ const email = document.querySelector('.email');
 const pass = document.querySelector('.pass');
 
 const atualiza_input = document.querySelector('.procurar_api');
+let xhr = new XMLHttpRequest();
+const imagem = document.querySelector('.imagem');
+let botao = document.querySelector('.btn_pesquisa');
+const name_agent= document.querySelector('.name_agent');
+const description = document.querySelector('.description');
+const pesquisar_agent = document.querySelector('.procurar_api');
+const agentes_info = document.querySelector('.agentes_info');
+
+const close_agenst = document.querySelector('.close_agenst');
+
+close_agenst.addEventListener('click', function () {
+    agentes_info.style.display = 'none';
+});
 
 btnSign.addEventListener('click', function () {
     console.log(document.querySelector('.email').value);
@@ -125,5 +138,29 @@ function verifica_inputSearch() {
         atualiza_input.style.display = 'inline';
     }
 };
+
+pesquisar_agent.addEventListener('keydown', function () {
+    let agente_esc = document.querySelector('.procurar_api').value;
+    xhr.open('GET', 'https://valorant-api.com/v1/agents', true);
+    xhr.addEventListener('load', function () {
+        if (xhr.status === 200 && xhr.readyState === 4) {
+            const res = JSON.parse(xhr.responseText);
+            console.log(res);
+            for(i=0; i<=20; i++){
+                let agente = res.data[i].displayName;
+                if(agente.toLowerCase() === agente_esc.toLowerCase()){
+                   imagem.src = res.data[i].fullPortrait;
+                   name_agent.innerHTML = res.data[i].displayName;
+                   description.innerHTML = res.data[i].description;
+                   agentes_info.style.display = 'flex';
+                    break;
+                } 
+            }
+        } else {
+            console.error('Bad request!');
+        }
+    });
+    xhr.send();
+});
 //  atualiza_input.style.display = 'inline';
 verifica_inputSearch();
