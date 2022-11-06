@@ -5,89 +5,19 @@
     font-family: 'M PLUS 1', sans-serif;
 }
 
-.login, .criando_conta{
+/* =============== Header =============== */
+.header{
+    display: flex;
+    justify-content: space-between;
     position: fixed;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #000;
-    border-radius: 20px;
-    width: 50%;
-    height: 50%;
-    gap: 5px;
-    background-color: #fff;
-    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 15px;
 }
-
-.login.show{
-    display: flex;
-}
-
-.criando_conta.show{
-    display: flex;
-}
-.criando_conta.noshow{
-    display: none;
-}
-
-.input_sign, .input_criar{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    gap: 5px;
-}
-
-.sign_case, .conta_case{
-    position: absolute;
-    font-size: 30px;
-    top: 5px;
-    left: 40%;
-}
-
-.create_account{
-    cursor: pointer;
-    color: rgb(119, 30, 228);
-    
-}
-
-.create_account:hover{
-    text-decoration: underline;
-}
-
-.close, .close_criando_conta, .close_agenst{
-    position: absolute;
-    align-self: flex-end;
-    padding: 10px;
-    top: 10px;
-}
-
-.input_sign input, .input_criar input{
-    width: 90%;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.signin{
-    border-radius: 5px;
-    width: 64px;
-    height: 32px;
-}
-
-.signin:hover, .close, .close_criando_conta, .btn_criar, .close_agenst{
-    cursor: pointer;
-}
-
-.btn_criar{
-    border-radius: 5px;
-    width: 128px;
-    height: 32px;
-}
-
-/* Header */
-
 
 .logo{
     width: 120px;
@@ -101,20 +31,12 @@
     color: black;
 }
 
-header {
+.header_center ul, .header_right ul{
     display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-top: 10px;
-    z-index: 1;
-    font-weight: bold;
-    font-size: 15px;
+    list-style-type: none;
 }
 
-.menucentral a, .menuesquerdo a{
+.header_center a, .header_right a{
     text-decoration: none;
     color: black;
     margin: 0px 10px;
@@ -123,32 +45,37 @@ header {
     padding: 4px 8px;
 }
 
-.menucentral a:hover, .menuesquerdo a:hover{
+.header_center a:hover, .header_right a:hover{
     border-radius: 5px;
-    background-color: rgba(23, 26, 32, 0.1);
+    background-color: rgba(94, 98, 105, 0.1);
 
 }
 
-.menucentral{
+.header_center{
     display: none;
 }
 
 @media(min-width:1100px){
-    .menucentral{
+    .header_center{
         display: initial;
     }
 }
 
-/**/
+.procurar_api{
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+}
 
 .procurar_api{
     display: none;
 }
-.procurar_api.show{
-    display: inline;
-}
 
-/**/
+/* =============== Header =============== */
+
+/* ============== Section =============== */
 section.m3{
     width: 100%;
     height: 100vh;
@@ -181,16 +108,6 @@ section.m3{
     font-size: 14px;
     color: black;
     
-}
-
-.menuesquerdo .mnesq{
-    display: none;
-}
-
-@media(min-width:1100px){
-    .menuesquerdo .mnesq{
-        display: initial;
-    }
 }
 
 .order{
@@ -230,7 +147,67 @@ section .btn a{
 .conteiner a{
     color: black;
 }
+/* ============== Section =============== */
 
+/* =============== Login ================ */
+.login{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #000;
+    border-radius: 20px;
+    width: 50%;
+    height: 50%;
+    gap: 5px;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.input_sign{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    gap: 5px;
+}
+
+.sign_case {
+    position: absolute;
+    font-size: 30px;
+    top: 5px;
+    left: 40%;
+}
+
+.close, .close_agenst {
+    position: absolute;
+    align-self: flex-end;
+    padding: 10px;
+    top: 10px;
+}
+
+.input_sign input {
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.signin{
+    border-radius: 5px;
+    width: 64px;
+    height: 32px;
+}
+
+.signin:hover, .close , .close_agenst {
+    cursor: pointer;
+}
+
+.email_err, .pass_err{
+    color: #ff0000;
+}
+/* ============= Agents ============== */
 .imagem{
     width: 537px;
     height: 487px;
@@ -253,11 +230,4 @@ section .btn a{
 
 .name_agent{
     font-size: 5rem;
-}
-
-.close_agenst{
-    position: absolute;
-    align-self: flex-end;
-    padding: 10px;
-    top: 10px;
 }
