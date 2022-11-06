@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="Img/Tesla_T_symbol.svg.png">
+    <link rel="stylesheet" href="style.css">
     <title>Electric Cars, Solar & Clean Energy | Tesla</title>
 </head>
-
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
             <a href="#">
                 <svg viewBox="0 0 342 35">
@@ -21,25 +19,25 @@
                 </svg>
             </a>
         </div>
-        <div class="menucentral">
-            <ol>
-                <il><a href="#"><span>Model S</span></a></il>
-                <il><a href="#"><span>Model 3</span></a></il>
-                <il><a href="#"><span>Model X</span></a></il>
-                <il><a href="#"><span>Model Y</span></a></il>
-                <il><a href="#"><span>Solar Roof</span></a></il>
-                <il><a href="#"><span>Solar Panels</span></a></il>
-            </ol>
+        <div class="header_center">
+            <ul>
+                <li><a href="#"><span>Model S</span></a></li>
+                <li><a href="#"><span>Model 3</span></a></li>
+                <li><a href="#"><span>Model X</span></a></li>
+                <li><a href="#"><span>Model Y</span></a></li>
+                <li><a href="#"><span>Solar Roof</span></a></li>
+                <li><a href="#"><span>Solar Panels</span></a></li>
+            </ul>
         </div>
-        <div class="menuesquerdo">
-            <ol>
-                <il><a href="#" class="mnesq"><span><input type="text" placeholder="Search" class="procurar_api"></span></a></il>
-                <il><a href="#" class="mnesq" id="account_show"><span>Account</span></a></il>
-                <il><a href="#"><span>Menu</span></a></il>
-            </ol>
+        <div class="header_right">
+            <ul>
+                <li><a href="#" class="menu_right"><span><input type="text" placeholder="Pesquisar" class="procurar_api"></span></a></li>
+                <li><a href="#" class="menu_right" id="account_show"><span>Account</span></a></li>
+                <li><a href="#"><span>Menu</span></a></li>
+            </ul>
         </div>
     </header>
-    
+
     <div class="login">
         <div class="close">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -52,14 +50,14 @@
             <h3>Sign Up</h3>
         </div>
         <div class="input_sign">
-            <label for="">Email:</label>
+            <label for="">Email: <span class="email_err"></span></label>
             <input type="email" class="email">
-            <label for="">Password:</label>
+            <label for="">Password: <span class="pass_err"></span></label>
             <input type="password" class="pass">
             <button class="signin">Sign in</button>
-            <span class="create_account">Don't have an account?</span>
         </div>
     </div>
+
     <div class="agentes_info">
         <div class="close_agenst">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -75,29 +73,6 @@
         </div>
     </div>
 
-    <div class="criando_conta">
-        <div class="close_criando_conta">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-            </svg>
-        </div>
-        <div class="conta_case">
-            <h3>Sign Up</h3>
-        </div>
-        <div class="input_criar">
-            <label for="">Name: <span class="val_nome"></span></label>
-            <input type="email" class="name_criar">
-            <label for="">Email: <span class="val_email"></span></label>
-            <input type="email" class="email_criar">
-            <label for="">Password: <span class="val_senha"></span></label>
-            <input type="password" class="pass_criar">
-            <label for="">Reapt password:</label>
-            <input type="password" class="passrepeat_criar">
-            <button class="btn_criar">Create an account</button>
-        </div>
-    </div>
     <section class="m3">
         <div>
             <div class="conteiner">
@@ -110,8 +85,6 @@
             </div>
         </div>
     </section>
-
     <script src="script.js"></script>
 </body>
-
 </html>
